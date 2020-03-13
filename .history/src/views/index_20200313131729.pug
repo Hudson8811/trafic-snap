@@ -1,0 +1,48 @@
+extends layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'index.html'
+		};
+
+
+
+
+block main
+	.top-section-wrap
+		section.top-section
+			img.top-section-bubbles(src="../img/bubble.png", alt="")
+
+			.container.top-section-container
+				.top-section__logo
+					img(src="../img/Logo.svg" alt="")
+					span(data-text="Cougar Traffic Run") Cougar Traffic Run
+				.top-section-flex
+						img.ts-phone(src="../img/phone-desktop.png" alt="")
+					.top-section-flex-left
+						h1.top-section-title
+							.top-section-title__span-1(data-text="Трафик из") Трафик из
+							.top-section-title__span-2 SnapChat
+							img.top-section-title-img(src="../img/fire.png" alt="")
+						.top-section-sub-title Работаем с вашими целями как со своими
+						.btn.btn-first-section Вперед!
+						.ts-what-we-do
+							.ts-what-we-do-item
+								img.ts-what-we-do-item__tail(src="../img/MessageTail.svg", alt="")
+								| Приводим трафик из Snapchat на мобильные приложения и не только
+							.ts-what-we-do-item
+								img.ts-what-we-do-item__tail(src="../img/MessageTail.svg", alt="")
+								| Делаем креативы, локализуем, проходим модерацию, знаем все тонкости и секреты
+							.ts-what-we-do-item
+								img.ts-what-we-do-item__tail(src="../img/MessageTail.svg", alt="")
+								| Адекватная комиссия и минимальный бюджет
+							.ts-what-we-do-item
+								| Консалтим и помогаем развивать бизнес
+							.ts-what-we-do-item
+								img.ts-what-we-do-item__tail(src="../img/MessageTail.svg", alt="")
+								| Своя баинговая команда, прозрачная работа
+							.ts-what-we-do-item
+								| Выполняем KPI, приводим живой, платящий трафик
+
+					.top-section-flex__right
