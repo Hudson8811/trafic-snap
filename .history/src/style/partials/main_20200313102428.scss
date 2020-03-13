@@ -1,0 +1,116 @@
+$font1: 'Roboto',
+sans-serif;
+
+a {
+	text-decoration: none;
+}
+
+html,
+body {}
+
+body {
+	color: #3b3b3b;
+	font-family: $font1;
+	font-size: 16px;
+	margin: 0;
+	background: #ffffff;
+}
+
+.container {
+	width: 1200px;
+	max-width: 95%;
+	max-width: calc(100% - 16px * 2);
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+
+#jGrowl {
+	z-index: 999999;
+}
+
+*:focus {
+	outline: none;
+}
+
+.hide {
+	display: none;
+}
+
+
+.top-section {
+	background: url(../img/bg-desktop.png) no-repeat center center;
+	background-size: cover;
+	min-height: 100vh;
+	padding-top: 62px;
+	box-sizing: border-box;
+
+	&__logo {
+		display: flex;
+		align-items: center;
+
+		img {}
+
+		span {
+			font-style: normal;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 19px;
+			letter-spacing: 0.02em;
+			text-transform: uppercase;
+			position: relative;
+			color: #FFFFFF;
+			z-index: 1;
+
+			&::before {
+				content: attr(data-text);
+				color: #22F5EF;
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				margin-left: -1px;
+				z-index: -2;
+			}
+
+			&::after {
+				content: attr(data-text);
+				z-index: -1;
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				color: #FE1753;
+				margin-left: 1px;
+				margin-top: 1px;
+			}
+		}
+	}
+
+
+}
+
+.top-section-container {}
+
+.top-section-flex {
+	display: flex;
+
+	&__left {}
+
+	&__right {}
+}
+
+.top-section-title {
+	&__span-1 {}
+
+	&__span-2 {}
+}
+
+.top-section-sub-title {}
+
+.btn {}
+
+.ts-what-we-do {}
+
+.ts-what-we-do-item {}
+
+.ts-phone {}
