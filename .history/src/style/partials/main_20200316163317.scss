@@ -441,8 +441,6 @@ body {
 	background: url(../img/bgs3.jpeg);
 	position: relative;
 	z-index: 3;
-
-    border-radius: 0 0 60px 60px;
 }
 
 .wwcs-container {
@@ -632,28 +630,13 @@ body {
 /////////////////////////////Секция о snap
 
 
-.about-snap-section {
-	box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 12px 50px rgba(74, 175, 248, 0.5);
-}
+.about-snap-section {}
 
 .absns-top {
-	text-align: center;
-
-	&__pic {margin-top: 70px;}
+	&__pic {}
 
 	&__title {
-		margin-top: 16px;
-		font-style: normal;
-		font-weight: bold;
-		font-size: 32px;
-		line-height: 37px;
-
-		color: #1A1A1A;
-
-		span {
-			margin-left: 9px;
-			background: #FFFC03;
-		}
+		span {}
 	}
 }
 
@@ -708,32 +691,32 @@ body {
 	position: absolute;
 	width: 1px;
 	height: 1px;
-	top: 1%;
-	left: 1%;
+	%f top: 1%;
+	t: 1px;
 }
 
 .absns-block-left__triangle-line-1 {
 	position: absolute;
 	width: 1px;
 	height: 1px;
-	top: 1%;
-	left: 1%;
+	%f top: 1%;
+	t: 1px;
 }
 
 .absns-block-left__triangle-line-2 {
 	position: absolute;
 	width: 1px;
 	height: 1px;
-	top: 1%;
-	left: 1%;
+	%f top: 1%;
+	t: 1px;
 }
 
 .absns-block-left__triangle-line-3 {
 	position: absolute;
 	width: 1px;
 	height: 1px;
-	top: 1%;
-	left: 1%;
+	%f top: 1%;
+	t: 1px;
 }
 
 .absns-block-right {}
