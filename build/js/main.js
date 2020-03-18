@@ -82,11 +82,16 @@ $(document).ready(function () {
 
       $('.js-wwcs-item-gif-parallax').each(function () {
 
-        var gifSecOffset = $('.what-we-can-section').position().top;
+        /*var gifSecOffset = $('.what-we-can-section').position().top;
         var ttgif = (ws - $(this).parent().position().top-gifSecOffset+250) / 5;
         ttgif = ttgif <= 170 ? ttgif : 170;
         $(this).css({
           'transform': `translate(0px, -${ttgif}px)`
+        });*/
+        $('.js-wwcs-item-gif-parallax').each(function () {
+          $(this).css({
+            'transform': `translate(0px, 0px)`
+          });
         });
       });
     }
