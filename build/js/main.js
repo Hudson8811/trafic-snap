@@ -139,3 +139,20 @@ ta.addEventListener('focus', function(){
   autosize(ta);
 });
 */
+
+var page = $('html, body');
+$('.js-smooth-scroll').on('click touch', function () {
+    event.preventDefault();
+
+    if ($.attr(this, 'href') == "#") {
+        page.animate({
+            scrollTop: 0
+        }, 400);
+    }
+    else {
+        page.animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 400);
+    }
+
+});
