@@ -108,10 +108,10 @@ $(document).ready(function () {
 
     ////////////////////////////////
 
-    var ausOffset = $('.about-us-section').position().top - $('.aus-top').position().top - 200;
+    var ausOffset = $('.aus-block').position().top;
     console.log(ausOffset, ws)
     if (ausDisplay === 0) {
-      if (ws >= ausOffset) {
+      if (ws >= ausOffset - 350) {
         ausDisplay = 1;
         displayAUS();
       }
@@ -163,7 +163,7 @@ $('.js-smooth-scroll').on('click touch', function () {
   }
   else {
     page.animate({
-      scrollTop: $($.attr(this, 'href')).offset().top+60
+      scrollTop: $($.attr(this, 'href')).offset().top
     }, 400);
   }
 

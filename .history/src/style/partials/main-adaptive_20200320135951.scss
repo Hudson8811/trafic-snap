@@ -68,12 +68,6 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-around;
-		align-items: stretch;
-	}
-
-	.aus-item-inner {
-		height: 100%;
-		box-sizing: border-box;
 	}
 
 	.aus-item {
@@ -93,11 +87,7 @@
 	}
 }
 
-@media screen and (min-width:995px) {
-	.top-section-inner{
-		min-height: 100vh;
-	}
-}
+@media screen and (min-width:995px) {}
 
 @media screen and (max-width:995px) {
 
@@ -521,7 +511,6 @@
 		left: 37%;
 		width: 117vw;
 	}
-
 	.btn-first-section-wrap {
 		margin-top: 125px;
 	}
@@ -588,7 +577,6 @@
 		width: 129vw;
 	}
 }
-
 @media screen and (max-width:380px) {
 	.absns-block-left {
 		max-height: 461px;

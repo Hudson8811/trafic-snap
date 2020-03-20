@@ -163,7 +163,7 @@ $('.js-smooth-scroll').on('click touch', function () {
   }
   else {
     page.animate({
-      scrollTop: $($.attr(this, 'href')).offset().top+60
+      scrollTop: $($.attr(this, 'href')).offset().top
     }, 400);
   }
 

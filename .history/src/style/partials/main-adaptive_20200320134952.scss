@@ -68,12 +68,6 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-around;
-		align-items: stretch;
-	}
-
-	.aus-item-inner {
-		height: 100%;
-		box-sizing: border-box;
 	}
 
 	.aus-item {
@@ -93,11 +87,7 @@
 	}
 }
 
-@media screen and (min-width:995px) {
-	.top-section-inner{
-		min-height: 100vh;
-	}
-}
+@media screen and (min-width:995px) {}
 
 @media screen and (max-width:995px) {
 
@@ -515,27 +505,6 @@
 	}
 }
 
-@media screen and (min-width:550px) and (max-width:995px) {
-	.top-section-bubbles {
-		top: -12%;
-		left: 37%;
-		width: 117vw;
-	}
-
-	.btn-first-section-wrap {
-		margin-top: 125px;
-	}
-
-	.ts-what-we-do {
-		margin-top: 20.3vw;
-	}
-
-	.ts-phone {
-		top: 2.1vw;
-		right: -6.6vw;
-	}
-}
-
 @media screen and (max-width:500px) {
 	.wwcs-item-inner {
 		min-height: 260px;
@@ -548,14 +517,9 @@
 
 @media screen and (max-width:450px) {
 	.top-section-bubbles {
-		top: -27vw;
-		left: 5vw;
-		width: 243vw;
-	}
-
-	.ts-phone {
-		top: 43.1vw;
-		right: -26.6vw;
+		top: -11%;
+		left: 4%;
+		width: 254vw;
 	}
 }
 
@@ -577,15 +541,6 @@
 		margin-left: 3vw;
 		width: 15vw;
 		height: auto;
-	}
-
-}
-
-@media screen and (max-width:370px) {
-	.ts-phone {
-		top: 69.1vw;
-		right: -26.6vw;
-		width: 129vw;
 	}
 }
 

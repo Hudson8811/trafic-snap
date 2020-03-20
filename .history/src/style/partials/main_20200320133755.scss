@@ -74,8 +74,6 @@ textarea {
 	display: inline-block;
 	position: relative;
 
-	transition-duration: .2s;
-
 	&::before {
 		position: absolute;
 		width: 281px;
@@ -106,12 +104,8 @@ textarea {
 	background-image: url(../img/btn-eff-3.png);
 }
 
-.button-animation-visible {
-		transform: scale(1.05);
-
-	&::before {
-		opacity: 1;
-	}
+.button-animation-visible::before {
+	opacity: 1;
 }
 
 .btn-first-section-wrap {
@@ -130,7 +124,6 @@ textarea {
 }
 
 .top-section-inner {
-	transition-duration: .3s;
 	position: relative;
 	z-index: 1;
 	display: block;
@@ -139,15 +132,10 @@ textarea {
 	min-height: 100vh;
 	padding-top: 62px;
 	padding-bottom: 60px;
+	border-radius: 0px 0px 60px 60px;
 	background: url(../img/bg-desktop.png) no-repeat center center;
 	background-size: cover;
-	border-radius: 0px 0px 60px 60px;
 	box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 3px 24px #FFFC03;
-}
-
-.top-section-inner-non-scroll {
-
-	border-radius: 0px !important;
 }
 
 .top-section-bubbles {
@@ -284,7 +272,6 @@ textarea {
 		}
 	}
 }
-
 .top-section-title-img {
 	display: inline-block;
 	width: auto;
@@ -327,7 +314,7 @@ textarea {
 	line-height: 100%;
 	border: 2px solid transparent;
 	transition-duration: .2s;
-	min-width: 347px;
+    min-width: 347px;
 
 	&:nth-child(2n-1) {
 		min-width: 332px;
@@ -341,7 +328,6 @@ textarea {
 			stroke: #22F5EF;
 		}
 	}
-
 	&.ts-what-we-do-item--red:hover {
 		color: #FE1753;
 		border-color: #FE1753;
@@ -365,7 +351,7 @@ textarea {
 		transition-duration: .2s;
 		stroke-dasharray: 126;
 		stroke-dashoffset: 92;
-		transform: translate(0, -16px);
+		transform: translate(0,-16px);
 	}
 }
 
@@ -433,9 +419,6 @@ textarea {
 	width: 350px;
 	max-width: calc(33.333% - 15px);
 
-	transition-duration: .7s;
-	opacity: 0;
-
 	&::before {
 		position: absolute;
 		z-index: -1;
@@ -451,10 +434,6 @@ textarea {
 	&:hover .aus-item-inner {
 		transform: scale(1.05);
 	}
-}
-
-.aus-item-visible {
-	opacity: 1;
 }
 
 .aus-item-inner {
@@ -550,7 +529,7 @@ textarea {
 	background: url(../img/bgs3.jpeg);
 	background-position: center center;
 	background-repeat: no-repeat;
-	background-size: cover;box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 12px 50px rgba(74, 175, 248, 0.5);
+	background-size: cover;
 }
 
 .wwcs-container {
@@ -656,7 +635,7 @@ textarea {
 	z-index: -1;
 	top: 32%;
 	left: 81.4%;
-	width: 75%;
+	width: 100%;
 	max-width: 425px;
 	max-height: 244px;
 }

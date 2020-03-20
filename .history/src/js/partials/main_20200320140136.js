@@ -11,22 +11,8 @@ function displayConditions() {
   });
 }
 
-function displayAUS() {
-  var duration = 200; //'slow'
-  console.log($(window).scrollTop(), "!!!!");
-
-  $('.aus-item').each(function () {
-    var tthis = $(this);
-    setTimeout(function () {
-      tthis.addClass('aus-item-visible');
-    }, duration * tthis.index());
-
-  });
-}
-
 var prevBtnAnim = 0;
 var conditionsDisplay = 0;
-var ausDisplay = 0;
 $(document).ready(function () {
   $("input[name='phone']").mask(" +7 (999) 999-99-99");
 
@@ -34,37 +20,22 @@ $(document).ready(function () {
 
 
     var ws = $(window).scrollTop();
-    if (ws > 0) {
+    if(ws>0){
       $('.top-section-inner').removeClass('top-section-inner-non-scroll');
-    } else {
+    }else{
       $('.top-section-inner').addClass('top-section-inner-non-scroll');
     }
-    if ($(window).width() >= '996') {
-      $('#parallax-1-layer-3').css({
-        'transform': `translate(0px, -${ws / 5}px)`
-      });
+    $('#parallax-1-layer-3').css({
+      'transform': `translate(0px, -${ws / 4}px)`
+    });
 
-      $('#parallax-1-layer-2').css({
-        'transform': `translate(0px, -${ws / 3}px)`
-      });
+    $('#parallax-1-layer-2').css({
+      'transform': `translate(0px, -${ws / 2}px)`
+    });
 
-      $('#parallax-1-layer-1').css({
-        'transform': `translate(0px, -${ws / 2}px)`
-      });
-    }
-    else {
-      $('#parallax-1-layer-3').css({
-        'transform': `translate(0px, -${ws / 8}px)`
-      });
-
-      $('#parallax-1-layer-2').css({
-        'transform': `translate(0px, -${ws / 5}px)`
-      });
-
-      $('#parallax-1-layer-1').css({
-        'transform': `translate(0px, -${ws / 3}px)`
-      });
-    }
+    $('#parallax-1-layer-1').css({
+      'transform': `translate(0px, -${ws / 1}px)`
+    });
 
 
     ///////////////////////////////////////////////
@@ -76,11 +47,11 @@ $(document).ready(function () {
         var ttgif = (ws - gifOffset - $(this).parent().index() * $(this).parent().height()) / 5;
         ttgif = ttgif <= 170 ? ttgif : 170;
         $(this).css({
-          'transform': `translate(0px, -${ttgif / 2}px)`
+          'transform': `translate(0px, -${ttgif}px)`
         });
       });
     }
-    else {
+    else{
 
       $('.js-wwcs-item-gif-parallax').each(function () {
 
@@ -108,16 +79,6 @@ $(document).ready(function () {
 
     ////////////////////////////////
 
-    var ausOffset = $('.about-us-section').position().top - $('.aus-top').position().top - 200;
-    console.log(ausOffset, ws)
-    if (ausDisplay === 0) {
-      if (ws >= ausOffset) {
-        ausDisplay = 1;
-        displayAUS();
-      }
-    }
-    ////////////////////////////////
-
     var condOffset = $('.conditions-section').position().top;
     if (conditionsDisplay === 0) {
       if (ws >= condOffset - 500) {
@@ -133,7 +94,7 @@ $(document).ready(function () {
       par.removeClass('button-animation-1').removeClass('button-animation-2').removeClass('button-animation-3');
       var random = Math.floor(Math.random() * Math.floor(3)) + 1; //1, 2 или 3
       random = random !== prevBtnAnim ? random : (Math.floor(Math.random() * Math.floor(3)) + 1);
-      random = random !== prevBtnAnim ? random : (random + 1) % 3 + 1;
+      random = random !== prevBtnAnim ? random : (random+1)%3+1;
       prevBtnAnim = random;
       par.addClass('button-animation-' + random);
       setTimeout(function () {
@@ -154,17 +115,17 @@ ta.addEventListener('focus', function(){
 
 var page = $('html, body');
 $('.js-smooth-scroll').on('click touch', function () {
-  event.preventDefault();
+    event.preventDefault();
 
-  if ($.attr(this, 'href') == "#") {
-    page.animate({
-      scrollTop: 0
-    }, 400);
-  }
-  else {
-    page.animate({
-      scrollTop: $($.attr(this, 'href')).offset().top+60
-    }, 400);
-  }
+    if ($.attr(this, 'href') == "#") {
+        page.animate({
+            scrollTop: 0
+        }, 400);
+    }
+    else {
+        page.animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 400);
+    }
 
 });

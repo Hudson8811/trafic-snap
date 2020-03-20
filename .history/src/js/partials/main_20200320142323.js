@@ -11,22 +11,8 @@ function displayConditions() {
   });
 }
 
-function displayAUS() {
-  var duration = 200; //'slow'
-  console.log($(window).scrollTop(), "!!!!");
-
-  $('.aus-item').each(function () {
-    var tthis = $(this);
-    setTimeout(function () {
-      tthis.addClass('aus-item-visible');
-    }, duration * tthis.index());
-
-  });
-}
-
 var prevBtnAnim = 0;
 var conditionsDisplay = 0;
-var ausDisplay = 0;
 $(document).ready(function () {
   $("input[name='phone']").mask(" +7 (999) 999-99-99");
 
@@ -108,16 +94,6 @@ $(document).ready(function () {
 
     ////////////////////////////////
 
-    var ausOffset = $('.about-us-section').position().top - $('.aus-top').position().top - 200;
-    console.log(ausOffset, ws)
-    if (ausDisplay === 0) {
-      if (ws >= ausOffset) {
-        ausDisplay = 1;
-        displayAUS();
-      }
-    }
-    ////////////////////////////////
-
     var condOffset = $('.conditions-section').position().top;
     if (conditionsDisplay === 0) {
       if (ws >= condOffset - 500) {
@@ -163,7 +139,7 @@ $('.js-smooth-scroll').on('click touch', function () {
   }
   else {
     page.animate({
-      scrollTop: $($.attr(this, 'href')).offset().top+60
+      scrollTop: $($.attr(this, 'href')).offset().top
     }, 400);
   }
 

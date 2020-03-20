@@ -13,7 +13,6 @@ function displayConditions() {
 
 function displayAUS() {
   var duration = 200; //'slow'
-  console.log($(window).scrollTop(), "!!!!");
 
   $('.aus-item').each(function () {
     var tthis = $(this);
@@ -108,10 +107,9 @@ $(document).ready(function () {
 
     ////////////////////////////////
 
-    var ausOffset = $('.about-us-section').position().top - $('.aus-top').position().top - 200;
-    console.log(ausOffset, ws)
+    var ausOffset = $('.aus-block').position().top;
     if (ausDisplay === 0) {
-      if (ws >= ausOffset) {
+      if (ws >= ausOffset - 200) {
         ausDisplay = 1;
         displayAUS();
       }
@@ -163,7 +161,7 @@ $('.js-smooth-scroll').on('click touch', function () {
   }
   else {
     page.animate({
-      scrollTop: $($.attr(this, 'href')).offset().top+60
+      scrollTop: $($.attr(this, 'href')).offset().top
     }, 400);
   }
 

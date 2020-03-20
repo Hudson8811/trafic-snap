@@ -75,6 +75,9 @@ textarea {
 	position: relative;
 
 	transition-duration: .2s;
+	&:hover {
+		transform: scale(1.05);
+	}
 
 	&::before {
 		position: absolute;
@@ -106,12 +109,8 @@ textarea {
 	background-image: url(../img/btn-eff-3.png);
 }
 
-.button-animation-visible {
-		transform: scale(1.05);
-
-	&::before {
-		opacity: 1;
-	}
+.button-animation-visible::before {
+	opacity: 1;
 }
 
 .btn-first-section-wrap {
@@ -550,7 +549,7 @@ textarea {
 	background: url(../img/bgs3.jpeg);
 	background-position: center center;
 	background-repeat: no-repeat;
-	background-size: cover;box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 12px 50px rgba(74, 175, 248, 0.5);
+	background-size: cover;
 }
 
 .wwcs-container {
